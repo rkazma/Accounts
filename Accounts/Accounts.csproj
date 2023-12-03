@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="MassTransit" Version="7.3.1" />
+		<PackageReference Include="MassTransit.AspNetCore" Version="7.1.7" />
+		<PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.1" />
+		<PackageReference Include="MassTransit.RabbitMQ" Version="7.3.0" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Account.Service\Accounts.Service.csproj" />
+		<ProjectReference Include="..\Accounts.DataAccess\Accounts.DataAccess.csproj" />
+		<ProjectReference Include="..\Accounts.Domain.Models\Accounts.Domain.Models.csproj" />
+		<ProjectReference Include="..\Accounts.DTOModels\Accounts.DTOModels.csproj" />
+		<ProjectReference Include="..\Invocation.MassTransit\Invocation.MassTransit.csproj" />
+	</ItemGroup>
+
+</Project>
